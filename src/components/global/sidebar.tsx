@@ -7,7 +7,6 @@ import { menuOptions } from '@/lib/constants'
 import clsx from 'clsx'
 import { usePathname } from 'next/navigation'
 
-
 function Sidebar() {
   const pathName = usePathname()
 
