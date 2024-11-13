@@ -3,11 +3,12 @@ import { CardBody, CardContainer, CardItem } from "@/components/aceternity/3d-ca
 import { ContainerScroll } from "@/components/global/container-scroll";
 import Navbar from "@/components/global/navbar";
 import { Button } from "@/components/ui/button";
-import { HeroParallax } from "@/components/ui/hero-parallax";
-import { InfiniteMovingCards } from "@/components/ui/infinite-moving-cards";
-import { LampComponent } from "@/components/ui/lamp";
+import { HeroParallax } from "@/components/aceternity/hero-parallax";
+import { InfiniteMovingCards } from "@/components/aceternity/infinite-moving-cards";
+
 import { clients, products } from "@/lib/constants";
 import { CheckIcon } from "lucide-react";
+import { LampComponent } from "@/components/aceternity/lamp";
 
 export default function Home() {
   return (
