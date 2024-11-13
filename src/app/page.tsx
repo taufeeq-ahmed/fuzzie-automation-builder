@@ -1,6 +1,6 @@
 
 import { CardBody, CardContainer, CardItem } from "@/components/aceternity/3d-card";
-import { ContainerScroll } from "@/components/global/container-scroll";
+import { ContainerScroll } from "@/components/aceternity/container-scroll";
 import Navbar from "@/components/global/navbar";
 import { Button } from "@/components/ui/button";
 import { HeroParallax } from "@/components/aceternity/hero-parallax";

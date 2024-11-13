@@ -6,6 +6,9 @@ import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '../ui/
 import { menuOptions } from '@/lib/constants'
 import clsx from 'clsx'
 import { usePathname } from 'next/navigation'
+import { Separator } from '../ui/separator'
+import { Database, GitBranch, LucideMousePointerClick } from 'lucide-react'
+import { ModeToggle } from './mode-toggle'
 
 function Sidebar() {
   const pathName = usePathname()
@@ -22,7 +25,7 @@ function Sidebar() {
         <TooltipProvider>
           {menuOptions.map((menuItem) => (
             <ul key={menuItem.name}>
-              <Tooltip delayDuration={0}>
+              <Tooltip delayDuration={0}> 
                 <TooltipTrigger>
                   <li>
                     <Link
@@ -43,7 +46,7 @@ function Sidebar() {
                 </TooltipTrigger>
                 <TooltipContent
                   side="right"
-                  className="bg-black/10 backdrop-blur-xl"
+                  className="bg-black/10 backdrop-blur-xl text-white"
                 >
                   <p>{menuItem.name}</p>
                 </TooltipContent>
@@ -51,8 +54,8 @@ function Sidebar() {
             </ul>
           ))}
         </TooltipProvider>
-        {/* <Separator /> */}
-        {/* <div className="flex items-center flex-col gap-9 dark:bg-[#353346]/30 py-4 px-2 rounded-full h-56 overflow-scroll border-[1px]">
+        <Separator />
+        <div className="flex items-center flex-col gap-9 dark:bg-[#353346]/30 py-4 px-2 rounded-full h-56 overflow-scroll border-[1px]">
           <div className="relative dark:bg-[#353346]/70 p-2 rounded-full dark:border-t-[2px] border-[1px] dark:border-t-[#353346]">
             <LucideMousePointerClick
               className="dark:text-white"
@@ -80,11 +83,11 @@ function Sidebar() {
               size={18}
             />
           </div>
-        </div> */}
+        </div>
       </div>
-      {/* <div className="flex items-center justify-center flex-col gap-8">
+      <div className="flex items-center justify-center flex-col gap-8">
         <ModeToggle />
-      </div> */}
+      </div>
     </nav>
   )
 }
