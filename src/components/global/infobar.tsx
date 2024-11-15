@@ -1,24 +1,23 @@
-'use client'
-import React, { useEffect } from 'react'
+"use client";
+import React, { useEffect } from "react";
 // import { ModeToggle } from '../global/mode-toggle'
-import { Book, Headphones, Search } from 'lucide-react'
+import { Book, Headphones, Search } from "lucide-react";
 // import Templates from '../icons/cloud_download'
-import { Input } from '@/components/ui/input'
+import { Input } from "@/components/ui/input";
 
 import {
   Tooltip,
   TooltipContent,
   TooltipProvider,
   TooltipTrigger,
-} from '@/components/ui/tooltip'
-// import { UserButton } from '@clerk/nextjs'
+} from "@/components/ui/tooltip";
+import { UserButton } from "@clerk/nextjs";
+
 // import { useBilling } from '@/providers/billing-provider'
 // import { onPaymentDetails } from '@/app/(main)/(pages)/billing/_actions/payment-connecetions'
 
-
-
 const InfoBar = () => {
-//   const { credits, tier, setCredits, setTier } = useBilling()
+  //   const { credits, tier, setCredits, setTier } = useBilling()
 
   const onGetPayment = async () => {
     // const response = await onPaymentDetails()
@@ -26,11 +25,11 @@ const InfoBar = () => {
     //   setTier(response.tier!)
     //   setCredits(response.credits!)
     // }
-  }
+  };
 
   useEffect(() => {
-    onGetPayment()
-  }, [])
+    onGetPayment();
+  }, []);
 
   return (
     <div className="flex flex-row justify-end gap-6 items-center px-4 py-4 w-full dark:bg-black ">
@@ -71,9 +70,9 @@ const InfoBar = () => {
           </TooltipContent>
         </Tooltip>
       </TooltipProvider>
-      {/* <UserButton /> */}
+      <UserButton />
     </div>
-  )
-}
+  );
+};
 
-export default InfoBar
+export default InfoBar;
