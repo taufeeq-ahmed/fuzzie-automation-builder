@@ -4,6 +4,7 @@ import "./globals.css";
 import { ThemeProvider } from "@/providers/theme-provider";
 
 import { ClerkProvider } from "@clerk/nextjs";
+import ModalProvider from "@/providers/modal-provider";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -37,7 +38,9 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          <ClerkProvider>{children}</ClerkProvider>
+          <ClerkProvider>
+            <ModalProvider>{children}</ModalProvider>
+          </ClerkProvider>
         </ThemeProvider>
       </body>
     </html>

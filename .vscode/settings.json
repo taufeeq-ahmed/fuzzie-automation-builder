@@ -5,8 +5,10 @@
         "hookform",
         "lucide",
         "nextjs",
+        "powerfull",
         "trpc",
         "ucarecdn",
-        "uploadcare"
+        "uploadcare",
+        "Workflowform"
     ]
 }
