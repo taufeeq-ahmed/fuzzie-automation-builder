@@ -5,6 +5,7 @@
         "lucide",
         "nextjs",
         "trpc",
+        "ucarecdn",
         "uploadcare"
     ]
 }
