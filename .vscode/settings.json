@@ -5,10 +5,14 @@
         "hookform",
         "lucide",
         "nextjs",
+        "pannable",
         "powerfull",
+        "sonner",
         "trpc",
         "ucarecdn",
         "uploadcare",
-        "Workflowform"
+        "Workflowform",
+        "xyflow",
+        "zoomable"
     ]
 }
