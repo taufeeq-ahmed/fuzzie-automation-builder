@@ -1,18 +1,11 @@
 import React from "react";
 import Workflow from "./workflow";
-// import { onGetWorkflows } from "../_actions/workflow-connections";
+import { onGetWorkflows } from "../editor/_actions";
+
 // import MoreCredits from "./more-creadits";
 
 const Workflows = async () => {
-  // const workflows = await onGetWorkflows();
-  const workflows = [
-    {
-      name: "Automation Testing",
-      description: "string",
-      id: "string",
-      publish: true,
-    },
-  ];
+  const workflows = await onGetWorkflows();
 
   return (
     <div className="relative flex flex-col gap-4">

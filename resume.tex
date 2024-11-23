@@ -1,0 +1,205 @@
+x%-------------------------
+% Resume in Latex
+% Author: Taufeeq-Ahmed
+% Website: https://github.com/taufeeq-ahmed
+% License: MIT
+%------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage{xcolor}
+
+\usepackage[pdftex,colorlinks=true,linkcolor=NavyBlue,citecolor=NavyBlue,urlcolor=NavyBlue]{hyperref}
+
+
+\usepackage{fancyhdr}
+
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.375in}
+\addtolength{\evensidemargin}{-0.375in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1}
+  }\vspace{3pt}
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-1pt}\item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\resumeSubItem}[2]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand{\labelitemii}{$\circ$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+%%%%%%  CV STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+%----------HEADING-----------------
+\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+  \textbf{\href{https://io-taufeeq-ahmed.vercel.app/}{\Large Taufeeq Ahmed}} & Email : \href{mailto:io.taufeeq.ahmed@gmail.com}{io.taufeeq.ahmed@gmail.com}\\
+  \href{https://io-taufeeq-ahmed.vercel.app/}{https://io-taufeeq-ahmed.vercel.app/} & Mobile : +91-8919049647 \\
+\end{tabular*}
+
+%--------PROGRAMMING SKILLS------------
+\section{Programming Skills}
+ \resumeSubHeadingListStart
+   \item{
+     \textbf{Languages}{: HTML, CSS, Javascript/Typescript, Java, Python, SQL} 
+     \vspace{-5pt}
+   }
+   \item{
+     \textbf{Libraries/Frameworks}{: React.js, Next.js, Node.js, Express.js, SpringBoot, PostgreSQL, MongoDB} 
+     \vspace{-5pt}
+   }
+   \item{
+     \textbf{Tools}{: Github, Docker, Kubernetes, Firebase, Supabase} 
+   }
+ \resumeSubHeadingListEnd
+
+\vspace{0pt}
+%-------------------------------------------
+%-----------EDUCATION-----------------
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {RV College of Engineering}{Bengaluru, India}
+      {Bachelor of Engineering in Electronics \& Telecommunication;  GPA: 7.91/10}{Aug. 2019 -- Aug. 2023}
+  \resumeSubHeadingListEnd
+
+\vspace{0pt}
+%-----------EXPERIENCE-----------------
+\section{Experience}
+  \resumeSubHeadingListStart
+
+    \resumeSubheading
+      {Fibr.Ai}{Bengaluru, India}
+      {Frontend Engineer}{June 2024 - Current}
+      \resumeItemListStart
+        \resumeItem
+          {Developed a \textbf{Personalized Dashboard} for controlling the A/B testing experience of the product and and helped Fibr.ai scale to a \textbf{Revenue of 80K\$} per month}
+        \resumeItem
+          {Built a components library for standardizing the UI across the product and enforcing \textbf{consistent visual experience} in \textbf{Typescript}}
+
+      \resumeItemListEnd
+    \resumeSubheading
+      {Cogoport}{Mumbai, India}
+      {SDE-1 (Associate Software Engineer)}{Mar 2023 - May 2024}
+      \resumeItemListStart
+        \resumeItem
+          {Developed a platform-independent \textbf{\href{https://cms.cogoport.com/login}{Notification System}} using \textbf{Node.js} along with \textbf{bee-queue} resulting in enhanced user engagement and thus contributing to a \textbf{60\% boost} in lead generation.}
+        \resumeItem
+          {Built a \textbf{user-friendly} interface for creating and managing notifications, with \textbf{React.js/Next.js} and \textbf{Redux} which helped in optimizing efficiency by providing a centralized control system.}
+        \resumeItem
+          {Single-Handedly build a Feature \textbf{\href{https://www.cogoport.com/en-IN/knowledge-center/resources/world-port-info}{World Port Info}} and curated detailed insights on \textbf{3000+ }seaports across the world using \textbf{Next.js} and\textbf{ Python/Selenium} which helped in increasing the lead generation by \textbf{13\%} }
+        \resumeItem
+          {Enabled Cogoport's \textbf{\href{https://www.cogoport.com/ko-KR}{Globalization}} and expanded its business into \textbf{35+} countries into their languages, built the translation procedures using \textbf{AWS} and used \textbf{Next.js} for building the \textbf{UI}}
+        \resumeItem
+          {Developed a feature \textbf{\href{https://www.cogoport.com/en-IN/tools/tracking}{Container Tracking}} to track the containers across the world in \textbf{real-time}. Built the service using \textbf{SpringBoot} and developed the user interface with \textbf{Next.js} and \textbf{Leaflet} maps API}
+        \resumeItem
+          {Made enhancements to \textbf{20+ Legacy API's} in\textbf{ Java/SpringBoot} and improved their efficiency}
+        \resumeItem
+          {Led a 3-member team through the design and development phases of \textbf{\href{https://academy.cogoport.com/signin}{Cogo Academy}}. Implemented key features such as \textbf{online tests}, \textbf{challenge submissions, coursework} and onboarding processes using \textbf{Node.js}, \textbf{Express.js}, \textbf{Next.js}, \textbf{PostgreSQL} resulting in an outstanding
+            \textbf{80\%} reduction in associated costs for the company}
+
+      \resumeItemListEnd
+  \resumeSubHeadingListEnd
+  
+
+\vspace{0pt}
+%-----------PROJECTS-----------------
+\section{Projects}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Authentication System}{}
+      {Microservice}{}
+      \resumeItemListStart
+        \resumeItem
+          {Built a fully functional \textbf{\href{https://github.com/taufeeq-ahmed/tickets-microservice}{auth-sysytem}} in \textbf{Javascipt/Typescript} using \textbf{Node.js}. }
+
+       
+        \vspace{-5pt}
+        \resumeItem
+          {The whole application is containerized using \textbf{Docker} and \textbf{Kubernetes}}
+        \vspace{-5pt}
+        \resumeItem
+          {Currently working on\textbf{ CI/CD pipelines} for deployments}
+      \resumeItemListEnd
+      
+  \resumeSubHeadingListEnd
+
+%
+\vspace{0pt}
+%-----------Achievements-----------------
+\section{Achievements}
+  \resumeItemListStart
+        \resumeItem
+          {Solved \textbf{200+} problems on \textbf{Leetcode}}
+        \vspace{-10pt}
+        \resumeItem
+          {Made \textbf{\href{https://github.com/taufeeq-ahmed}{1900+ contributions on Github}} just in 1 Year}
+        \vspace{-10pt}
+        \resumeItem
+          {Led a team just after 1 week of starting as SDE-1 at Cogoport}
+        \vspace{-10pt}
+      \resumeItemListEnd
+
+%
+\vspace{0pt}
+% %-----------Hobbies-----------------
+% \section{Hobbies}
+%   \resumeItemListStart
+%         \resumeItem
+%           {Exploring New Programming Languages/Frameworks/Tools}
+%           \vspace{-10pt}
+%         \resumeItem
+%           {Active Member of \textbf{Y-Combinator}}
+%           \vspace{-10pt}
+%         \resumeItem
+%           {Customizing Terminal}
+%           \vspace{-10pt}
+%       \resumeItemListEnd
+
+% %
+\end{document}

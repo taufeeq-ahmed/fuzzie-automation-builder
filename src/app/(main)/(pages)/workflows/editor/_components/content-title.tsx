@@ -19,6 +19,8 @@ import { onContentChange } from "@/lib/editor-utils";
 // import { getFileMetaData } from "@/app/(main)/(pages)/connections/_actions/google-connection";
 import axios from "axios";
 import { toast } from "sonner";
+import GoogleFileDetails from "./google-file-details";
+import GoogleDriveFiles from "./google-drive-files";
 
 export interface Option {
   value: string;
@@ -39,7 +41,14 @@ type Props = {
   setSelectedSlackChannels: (value: Option[]) => void;
 };
 
-const ContentTitle = ({ nodeConnection, newState, file, setFile }: Props) => {
+const ContentTitle = ({
+  nodeConnection,
+  newState,
+  file,
+  setFile,
+  selectedSlackChannels,
+  setSelectedSlackChannels,
+}: Props) => {
   const { selectedNode } = newState.editor;
   const title = selectedNode.data.title;
 
@@ -104,23 +113,23 @@ const ContentTitle = ({ nodeConnection, newState, file, setFile }: Props) => {
                 <div className="flex flex-col gap-4">
                   <CardDescription>Drive File</CardDescription>
                   <div className="flex flex-wrap gap-2">
-                    {/* <GoogleFileDetails
+                    <GoogleFileDetails
                       nodeConnection={nodeConnection}
                       title={title}
                       gFile={file}
-                    /> */}
+                    />
                   </div>
                 </div>
               </CardContent>
             </Card>
           )}
-          {/* {title === "Google Drive" && <GoogleDriveFiles />} */}
-          {/* <ActionButton
+          {title === "Google Drive" && <GoogleDriveFiles />}
+          <ActionButton
             currentService={title}
             nodeConnection={nodeConnection}
             channels={selectedSlackChannels}
             setChannels={setSelectedSlackChannels}
-          /> */}
+          />
         </div>
       </Card>
     </AccordionContent>
