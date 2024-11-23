@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
 import { ThemeProvider } from "@/providers/theme-provider";
-
 import { ClerkProvider } from "@clerk/nextjs";
 import ModalProvider from "@/providers/modal-provider";
+import { Toast, ToastProvider } from "@/components/ui/toast";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -39,7 +39,9 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           <ClerkProvider>
-            <ModalProvider>{children}</ModalProvider>
+            <ModalProvider>
+              <ToastProvider>{children}</ToastProvider>
+            </ModalProvider>
           </ClerkProvider>
         </ThemeProvider>
       </body>
