@@ -1,6 +1,7 @@
+"use client";
+
 import { WorkflowFormSchema } from "@/lib/types";
 import { zodResolver } from "@hookform/resolvers/zod";
-// import { useRouter } from "next/navigation";
 import React from "react";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
@@ -22,9 +23,10 @@ import {
 import { Input } from "../ui/input";
 import { Button } from "../ui/button";
 import { Loader2 } from "lucide-react";
-// import { toast } from "sonner";
-// import { onCreateWorkflow } from "@/app/(main)/(pages)/workflows/_actions/workflow-connections";
+import { toast } from "sonner";
 import { useModal } from "@/providers/modal-provider";
+import { onCreateWorkflow } from "@/app/(main)/(pages)/workflows/editor/_actions";
+import { useRouter } from "next/navigation";
 
 type Props = {
   title?: string;
@@ -43,14 +45,14 @@ const Workflowform = ({ subTitle, title }: Props) => {
   });
 
   const isLoading = form.formState.isLoading;
-//   const router = useRouter();
+  const router = useRouter();
 
   const handleSubmit = async (values: z.infer<typeof WorkflowFormSchema>) => {
-    // const workflow = await onCreateWorkflow(values.name, values.description);
-    // if (workflow) {
-    //   toast.message(workflow.message);
-    //   router.refresh();
-    // }
+    const workflow = await onCreateWorkflow(values.name, values.description);
+    if (workflow) {
+      toast.message(workflow.message);
+      router.refresh();
+    }
     setClose();
   };
 
